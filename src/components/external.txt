@@ -1,0 +1,11 @@
+<div className="row">
+                {movies.map((data,i) =>
+                <div className="col">
+                 <MainContent key={i} {...data} 
+                 handleChange={this.handleChange} />  </div> )}
+            </div>
+            <SideNav count={count}/>  
+
+            {movies.map((movie =>
+                <MainContent name={movie.name} price={movie.price} image={movie.image} key={movie.id}/>
+            ))}
